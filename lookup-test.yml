@@ -1,0 +1,6 @@
+- name: Lookup Hashi Vault
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "{{ lookup('hashi_vault', 'secret=secret/data/actions/linode:token')}}"
